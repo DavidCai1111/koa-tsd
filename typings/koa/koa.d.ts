@@ -10,10 +10,10 @@
  =============================================== */
 /// <reference path="../node/node.d.ts" />
 
-declare module 'koa' {
-  import { EventEmitter } from 'events';
-  import * as http from 'http';
-  import * as net from 'net';
+declare module "koa" {
+  import { EventEmitter } from "events";
+  import * as http from "http";
+  import * as net from "net";
 
   interface IContext extends IRequest, IResponse {
       body?: any;
@@ -129,6 +129,7 @@ declare module 'koa' {
       onerror(err: any): void;
   }
 
-  var K: typeof Koa
-  export = K
+  namespace Koa {}
+
+  export = Koa;
 }
